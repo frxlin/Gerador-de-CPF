@@ -2,15 +2,17 @@
 import random
 import sys
 
+
+
 nove_digitos=''
 for i in range(9):
     nove_digitos+=str(random.randint(0,9))
 
-
+#aqui eu separo de acordo com o  padrao do cpf(xxx.xxx.xxx-xx)
     tres_digitos=nove_digitos[:3]
     seis_digitos=nove_digitos[3:6]
     noves_digitos=nove_digitos[6:9]
-
+# primeiro numero apos o traço(-)
 
 
 contador_1=10
@@ -21,7 +23,7 @@ for digito_1 in nove_digitos:
     digito_1=((total_1 * 10) % 11)
     validar= digito_1 if digito_1<=9 else 0
 
-#segundi numero
+#segundo numero apos o traço(-)
    
 dez_digitos=nove_digitos+str(validar)
 contador_2=11
